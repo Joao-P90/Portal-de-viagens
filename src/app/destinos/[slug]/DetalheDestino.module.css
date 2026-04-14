@@ -1,0 +1,29 @@
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+.imagem {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+}
+
+.conteudo {
+  padding: 24px;
+}
+
+.conteudo h1 {
+  color: #4b0082;
+  margin-bottom: 12px;
+}
+
+.localizacao {
+  font-weight: bold;
+  color: #666;
+  margin-bottom: 18px;
+}
