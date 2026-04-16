@@ -1,16 +1,18 @@
 import Layout from "@/components/Layout";
 import { destinos } from "@/data/destinos";
-import styles from "./DetalheDestino.module.css";
 import { notFound } from "next/navigation";
+import styles from "./DetalheDestino.module.css";
 
 type PageProps = {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 };
 
-export default function DestinoDetalhePage({ params }: PageProps) {
-  const destino = destinos.find((item) => item.slug === params.slug);
+export default async function DestinoDetalhePage({ params }: PageProps) {
+  const { slug } = await params;
+
+  const destino = destinos.find((item) => item.slug === slug);
 
   if (!destino) {
     notFound();
